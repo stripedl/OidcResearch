@@ -113,9 +113,6 @@ namespace TestOidcIdp
 	        // ref: https://github.com/aspnet/Docs/issues/2384
 	        app.UseForwardedHeaders(forwardOptions);
 
-			//app.UseMiddleware<SerilogMiddleware>();
-
-			app.UseMiddleware<RequestResponseLoggingMiddleware>();
 			app.UseIdentityServer();
 
 			app.UseHttpsRedirection();

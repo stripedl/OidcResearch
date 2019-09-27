@@ -1,0 +1,29 @@
+#Local files (VS and others)
+**/.vs/**
+*.suo
+*.user
+*.psess
+*.vsp
+*.nupkg
+*.dbmdl
+*.jfm
+*.min.css
+*.min.js
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+*.DotSettings
+**/obj/**
+**/bin/**
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# DotCover is a Code Coverage Tool
+*.dotCover
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
