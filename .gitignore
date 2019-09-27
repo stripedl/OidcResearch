@@ -12,7 +12,7 @@
 *.[Rr]e[Ss]harper
 *.DotSettings.user
 *.DotSettings
-#**/obj/**
+**/obj/**
 **/bin/**
 
 # Visual Studio profiler
