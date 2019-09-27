@@ -1,0 +1,16 @@
+﻿@model TestOidcIdp.Models.LoginRedirectRequest
+
+
+<form asp-controller="Login" asp-action="SignIn" method="post">
+	Email:  <input id="Email" name="Email" /> <br />
+	Password: <input id="Password" name="Password" type="password"><br />
+
+	<input type="hidden" id="RedirectUri"  name="RedirectUri" value="@Model.RedirectUri">
+
+	<button type="submit">Login</button>
+</form>
+
+
+<div style="color:darkblue">
+	redirect_uri: @Model.RedirectUri <br />
+</div>

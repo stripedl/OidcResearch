@@ -1,0 +1,11 @@
+﻿@model TestOidcIdp.Controllers.ConsentViewModel
+
+<!DOCTYPE html>
+
+<form asp-controller="Consent" asp-action="Index" method="post">
+
+	<input type="hidden" id="ReturnUrl" name="ReturnUrl" value="@Model.ReturnUrl">
+
+	<button name="button" value="yes" autofocus>Yes, Allow</button>
+
+</form>

@@ -1,0 +1,40 @@
+﻿@model object
+
+@{
+	ViewBag.Title = "title";
+}
+
+<h2>title</h2>
+<div style="white-space: pre-line">@ViewBag.Data</div>
+
+
+<form method="post" action="/Home/Logout">
+	<button type="submit">Logout</button>
+</form>
+
+<iframe id="iframeOp" src="@ViewBag.AuthServerCheckSessionUrl" style="width:0;height:0;border:0; border:none;"></iframe>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function(){
+		console.log('hello');
+
+		checkStatus();
+	});
+
+	function checkStatus() {
+		var protocol = location.protocol;
+		var slashes = protocol.concat("//");
+		var host = slashes.concat(window.location.hostname);
+		var port = window.location.port;
+		if (port) {
+			host = host.concat(":" + port);
+		}
+
+		var client = "myclient";
+		//var sessionState = getCookieValue("session_state");
+		var sessionState = "10";
+		var text = client + " " + sessionState;
+		var iframe = document.getElementById("iframeOp");
+		iframe.contentWindow.postMessage(text, host);
+	}
+</script>
